@@ -8,15 +8,20 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 public class ViewController {
-    @GetMapping("/")
+    @GetMapping("/index")
     public String index(){
         return "index";
+    }
+
+    @GetMapping("/")
+    public String test(){
+        return "test";
     }
 
     @PostMapping("/")
     public String index(String message, Model model){
         System.out.println(message);
         model.addAttribute("message", message);
-        return "index";
+        return "test";
     }
 }

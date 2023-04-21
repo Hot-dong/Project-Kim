@@ -1,6 +1,7 @@
 function getFormJson() {
   // Select Form
   let selForm = document.querySelector("#test_form");
+  let memoryField = document.querySelector("#memory");
 
   // Getting an FormData
   let data = new FormData(selForm);
@@ -9,7 +10,11 @@ function getFormJson() {
   let serializedFormData = serialize(data);
 
   // Log
-  alert(JSON.stringify(serializedFormData));
+  let text = JSON.stringify(serializedFormData);
+
+  memoryField.innerText += text;
+
+  event.preventDefault();
 }
 
 function serialize (rawData) {
