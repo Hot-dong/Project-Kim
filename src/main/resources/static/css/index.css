@@ -14,6 +14,19 @@ main {
   overflow-y: hidden;
 }
 
+.btn-primary,
+.btn-primary:active,
+.btn-primary:visited,
+.btn-primary:focus {
+    background-color: #9776FF;
+    border-color: #9776FF;
+}
+
+.btn-primary:hover {
+  background-color: #7554CC;
+  border-color: #7554CC;
+}
+
 .dropdown-toggle { outline: 0; }
 
 .btn-toggle {
@@ -86,16 +99,21 @@ main {
 }
 
 .select {
+  width: 200px;
+  display: flex;
+  justify-content: center;
   background-color: #9776FF;
   border-radius: 5px;
 }
 
 .select-button {
   color: #F2F2F2;
+  font-weight: 600;
 }
 
 .button {
   width: 200px;
+  background-color: #ccc;
   display: flex;
   justify-content: center;
   font-weight: 600;
@@ -105,11 +123,93 @@ main {
   width: 100vw;
   background-color: #f2f2f2;
   padding: 50px 100px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .chat-field {
   width: 800px;
-  height: 630px;
   border-radius: 10px;
-  background-color: #bbb;
+  background-color: #ccc;
+  padding: 20px;
+  margin-left: -25px;
+}
+
+.chat {
+  display: flex;
+}
+
+.assistance_profile {
+  width: 40px;
+  height: 40px;
+  background-color: #f2f2f2;
+  border-radius: 100%;
+  margin-right: 10px;
+}
+
+.assistance_chat {
+  min-width: 100px;
+  max-width: 400px;
+  background-color: #F2F2F2;
+  padding: 5px;
+  border-radius: 7px;
+  margin-top: 20px;
+}
+
+.chat-position {
+  float: right;
+}
+
+.user_chat {
+  min-width: 100px;
+  max-width: 400px;
+  min-height: 20px;
+  background-color: #F2F2F2;
+  padding: 5px;
+  border-radius: 7px;
+  margin-top: 20px;
+}
+
+.send-field {
+  position: fixed;
+  bottom: 55px;
+  width: 760px;
+}
+
+.footer-field {
+  width: 250px;
+}
+
+.analysis-field {
+  height: 570px;
+  border-radius: 10px;
+  background-color: #ccc;
+  padding: 20px;
+  margin-right: -20px;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+}
+
+.etc-field {
+  height: 50px;
+  border-radius: 10px;
+  background-color: #ccc;
+  padding: 20px;
+  margin-right: -20px;
+  display: flex;
+  margin-top: 10px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.etc-font {
+  font-size: 13px;
+  color: #000000;
+}
+
+.etc-middle {
+  border-left: solid #aaa 2px;
+  border-right: solid #aaa 2px;
+  padding: 0px 10px;
 }

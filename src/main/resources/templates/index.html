@@ -57,7 +57,7 @@
     }
   </style>
 </head>
-<body>
+<body data-spy="scroll" data-target="#menubar">
   <main class="d-flex flex-nowrap">
     <div class="flex-shrink-0 p-3 sidebar" style="width: 280px;">
       <div>
@@ -71,7 +71,7 @@
         <ul class="list-unstyled ps-0">
           <li class="mb-1">
             <div class="select">
-              <button class="btn rounded border-0 collapsed select-button button" data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="true">
+              <button class="btn rounded border-0 collapsed select-button" data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="true">
                 대화하기
               </button>
             </div>
@@ -85,11 +85,44 @@
       </div>
     </div>
     <div class="back-field">
-      <div class="chat-field">
-        <div class="chat-field_profile">
-          <!-- <img src="" alt="" /> -->
+      <div class="chat-field" data-spy="scroll" data-offset="0" style="height: 630px; overflow: auto;">
+        <div class="chat">
+          <div class="assistance_profile"></div>
+          <div class="assistance_chat">
+            <span>그때 니 머릿결은 마치 여우털 우아하게 쓸어내려 like 땅부자 아줌마 겨울철</span>
+          </div>
         </div>
-        <div class="chat-field_chat"></div>
+        <div class="chat chat-position">
+          <div class="user_chat">
+            <span>안녕! 김비서야! ㅈㄴ 고생시키네!</span>
+          </div>
+        </div>
+        <div class="chat">
+          <div class="assistance_profile"></div>
+          <div class="assistance_chat">
+            <span>그때 니 머릿결은 마치 여우털 우아하게 쓸어내려 like 땅부자 아줌마 겨울철</span>
+          </div>
+        </div>
+        <div class="send-field">
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="거시기를 해주세요.">
+            <div class="input-group-append">
+              <button class="btn btn-primary" type="button">전송</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-field">
+        <div class="analysis-field">
+          <div class="analysis-font">
+            분석결과
+          </div>
+        </div>
+        <div class="etc-field">
+          <div class="etc-font">Team.KHTP</div>
+          <a class="etc-font text-decoration-none etc-middle">팀 소개 보기</a>
+          <a class="etc-font text-decoration-none">문의하기</a>
+        </div>
       </div>
     </div>
   </main>
