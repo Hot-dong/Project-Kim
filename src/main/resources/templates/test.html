@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form action="/" method="post" id="test_form">
+        <input type="hidden" name="role" value="user" />
+        message : <input type="text" name="message" /> <br>
+        <input type="submit" onclick="getFormJson()" value="전송" />
+    </form>
+    <p th:text="${message}"></p>
+    <div id="memory"></div>
+</body>
+<script src="js/getFormJson.js"></script>
+</html>
