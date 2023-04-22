@@ -14,6 +14,13 @@ main {
   overflow-y: hidden;
 }
 
+@media (min-width: 768px) {
+  /* 뷰포트 너비가 768px 이상일 때 */
+  .send-field {
+    width: 100px; /* 높이를 100px로 변경 */
+  }
+}
+
 .btn-primary,
 .btn-primary:active,
 .btn-primary:visited,
@@ -127,61 +134,55 @@ main {
   justify-content: space-evenly;
 }
 
-.chat-field {
+.chating-field {
+  position: relative;
   width: 70%;
   height: 100%;
   border-radius: 10px;
   background-color: #ccc;
-  padding: 20px;
-  margin-left: -25px;
-  position: relative;
-  position: relative;
+  margin-left: 25px;
+}
+
+.chat-field {
+  padding-bottom: 60px;
 }
 
 .chat {
+  width: 100%;
+}
+
+.assistance_chat {
   display: flex;
+  align-items: center;
+  background-color: #d2d2d2;
+  padding: 5px;
 }
 
 .assistance_profile {
   width: 40px;
   height: 40px;
-  background-color: #f2f2f2;
-  border-radius: 100%;
+  background-color: tomato;
+  border-radius: 10%;
   margin-right: 10px;
 }
 
-.assistance_chat {
-  min-width: 5%;
-  max-width: 55%;
-  background-color: #F2F2F2;
-  padding: 5px;
-  border-radius: 7px;
-  margin-top: 20px;
-}
-
-.chat-position {
-  float: right;
-}
-
 .user_chat {
-  min-width: 100px;
-  max-width: 400px;
-  min-height: 20px;
-  background-color: #F2F2F2;
-  padding: 5px;
-  border-radius: 7px;
-  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  min-height: 50px;
+  background-color: yellowgreen;
+  padding: 5px 50px;
 }
 
 .send-field {
   position: absolute;
+  bottom: 0;
   width: 100%;
-}
-
-.send-field_input-field {
-  position: fixed;
-  bottom: 5%;
-  width: 70%;
+  padding: 5px 10px;
+  margin-bottom: -20px;
+  background-color: #ccc;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
 }
 
 .footer-field {
@@ -204,7 +205,7 @@ main {
   height: 9%;
   border-radius: 10px;
   background-color: #ccc;
-  padding: 20px;
+  padding: 5%;
   display: flex;
   margin-top: 10px;
   justify-content: space-between;
