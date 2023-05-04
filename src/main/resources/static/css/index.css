@@ -129,7 +129,7 @@ main {
 .back-field {
   width: 100vw;
   background-color: #f2f2f2;
-  padding: 50px 50px;
+  padding: 20px 20px;
   display: flex;
   justify-content: space-evenly;
 }
@@ -155,7 +155,7 @@ main {
 .assistance_chat {
   display: flex;
   background-color: #F7F7F8;
-  padding: 5px;
+  padding: 20px;
 }
 
 .assistance_profile > img {
@@ -170,7 +170,7 @@ main {
   align-items: center;
   min-height: 50px;
   background-color: #fff;
-  padding: 5px 50px;
+  padding: 20px;
 }
 
 .send-field {
@@ -196,9 +196,26 @@ main {
   border-radius: 10px;
   background-color: #ddd;
   padding: 20px;
-  display: flex;
+  display: block;
   justify-content: center;
   align-items: start;
+  text-align: center;
+}
+
+.analysis-list {
+  margin-top: 16px;
+  width: 100%;
+  height: 90%;
+}
+
+.analysis-data {
+  width: 100%;
+  height: auto;
+  margin-bottom: 12px;
+}
+
+#jobUrl {
+  color: #828282;
 }
 
 .etc-field {

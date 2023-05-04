@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="/src/main/resources/static/css/index.css">
   <style>
 
-    @media (min-width: 768px) {
+@media (min-width: 768px) {
       .bd-placeholder-img-lg {
         font-size: 3.5rem;
       }
@@ -71,54 +71,57 @@
         <ul class="list-unstyled ps-0">
           <li class="mb-1">
             <div class="select">
-              <button class="btn rounded border-0 collapsed select-button" data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="true">
+              <button type="button" class="btn rounded border-0 collapsed select-button" data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="true">
                 대화하기
               </button>
             </div>
           </li>
           <li class="mb-1">
-            <button class="btn rounded border-0 collapsed button" data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="true">
-              분석하기
-            </button>
+              <button id="chat-analyze" type="button" class="btn rounded border-0 collapsed button" data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="true">
+                  분석하기
+                  <span id="spinner" class="spinner-border spinner-border-sm m-1" role="status" aria-hidden="true" style="display: none"></span>
+              </button>
           </li>
         </ul>
       </div>
     </div>
     <div class="back-field">
       <div class="chating-field">
-        <div class="chat-field" data-spy="scroll" data-offset="0" style="height: 100%; overflow: auto;"><div class="chat">
-          <div class="assistance_chat">
-            <div class="assistance_profile">
-              <img src="data:image/png;base64,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">
-            </div>
-            <div>그때 니 머릿결은 마치 여우털 우아하게 쓸어내려 like 땅부자 아줌마 겨울철그때 니 머릿결은 마치 여우털 우아하게 쓸어내려 like 땅부자 아줌마 겨울철그때 니 머릿결은 마치 여우털 우아하게 쓸어내려 like 땅부자 아줌마 겨울철그때 니 머릿결은 마치 여우털 우아하게 쓸어내려 like 땅부자 아줌마 겨울철그때 니 머릿결은 마치 여우털 우아하게 쓸어내려 like 땅부자 아줌마 겨울철그때 니 머릿결은 마치 여우털 우아하게 쓸어내려 like 땅부자 아줌마 겨울철그때 니 머릿결은 마치 여우털 우아하게 쓸어내려 like 땅부자 아줌마 겨울철그때 니 머릿결은 마치 여우털 우아하게 쓸어내려 like 땅부자 아줌마 겨울철그때 니 머릿결은 마치 여우털 우아하게 쓸어내려 like 땅부자 아줌마 겨울철그때 니 머릿결은 마치 여우털 우아하게 쓸어내려 like 땅부자 아줌마 겨울철그때 니 머릿결은 마치 여우털 우아하게 쓸어내려 like 땅부자 아줌마 겨울철그때 니 머릿결은 마치 여우털 우아하게 쓸어내려 like 땅부자 아줌마 겨울철그때 니 머릿결은 마치 여우털 우아하게 쓸어내려 like 땅부자 아줌마 겨울철그때 니 머릿결은 마치 여우털 우아하게 쓸어내려 like 땅부자 아줌마 겨울철그때 니 머릿결은 마치 여우털 우아하게 쓸어내려 like 땅부자 아줌마 겨울철그때 니 머릿결은 마치 여우털 우아하게 쓸어내려 like 땅부자 아줌마 겨울철그때 니 머릿결은 마치 여우털 우아하게 쓸어내려 like 땅부자 아줌마 겨울철그때 니 머릿결은 마치 여우털 우아하게 쓸어내려 like 땅부자 아줌마 겨울철그때 니 머릿결은 마치 여우털 우아하게 쓸어내려 like 땅부자 아줌마 겨울철그때 니 머릿결은 마치 여우털 우아하게 쓸어내려 like 땅부자 아줌마 겨울철그때 니 머릿결은 마치 여우털 우아하게 쓸어내려 like 땅부자 아줌마 겨울철그때 니 머릿결은 마치 여우털 우아하게 쓸어내려 like 땅부자 아줌마 겨울철그때 니 머릿결은 마치 여우털 우아하게 쓸어내려 like 땅부자 아줌마 겨울철</div>
-          </div>
-          </div>
-          <div class="chat">
-            <div class="user_chat">
-              <span>그</span>
+        <div id="chat-messages" class="chat-field" data-spy="scroll" data-offset="0" style="height: 100%; overflow: auto;">
+          <div class="chat received">
+            <div class="assistance_chat">
+              <div class="assistance_profile">
+                <img src="https://blog.kakaocdn.net/dn/b8Kdun/btqCqM43uim/1sWJVkjEEy4LJMfR3mcqxK/img.jpg">
+              </div>
+              <p>안녕하세요 저는 사용자님께 알맞는 취업 정보를 제공해 드릴 김비서 입니다.</p>
             </div>
           </div>
         </div>
         <div class="send-field">
-          <div class="input-group">
-            <input type="text" class="form-control" placeholder="거시기를 해주세요.">
-            <div class="input-group-append">
-              <button class="btn btn-primary" type="button">전송</button>
-            </div>
-          </div>
+            <form id="chat-form">
+              <div class="input-group">
+                <input id="chat-input" type="text" class="form-control" placeholder="채팅을 입력해주세요.." />
+                <div class="input-group-append">
+                <button class="btn btn-primary" type="submit" id="chat-submit">전송</button>
+                </div>
+              </div>
+            </form>
         </div>
       </div>
       <div class="footer-field">
         <div class="analysis-field">
           <div class="analysis-font">
             분석결과
+            <div id="analysis-list" class="analysis-list">
+
+            </div>
           </div>
         </div>
+
         <div class="etc-field">
           <div class="etc-font">Team.KHTP</div>
           <a class="etc-font text-decoration-none etc-middle">팀 소개 보기</a>
-          <a class="etc-font text-decoration-none">문의하기</a>
+          <a class="etc-font text-decoration-none" href="mailto:kanghyunkim313@gmail.com">문의하기</a>
         </div>
       </div>
     </div>
