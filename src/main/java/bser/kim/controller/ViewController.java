@@ -13,9 +13,9 @@ public class ViewController {
         return "index";
     }
 
-    @GetMapping("/")
+    @GetMapping("/oauthTest")
     public String test(){
-        return "test";
+        return "oauthTest";
     }
 
     @PostMapping("/")
